@@ -1,3 +1,6 @@
+//Compile first by javac Newfoundlands.java
+//Run by java Newfoundlands
+
 public class Newfoundlands
 {
     // Instance Variables
@@ -8,11 +11,13 @@ public class Newfoundlands
  
     // Constructor Declaration of Class
 	  //We set the types we are going to set Ie: String or int
-    public Newfoundlands(String name,
-															String breed,
-                   int age,
-															String color
-														)
+    public Newfoundlands(
+					String name,
+					String breed,
+     int age,
+					String color
+				)
+					
     {
         this.name = name;
         this.breed = breed;
@@ -46,21 +51,30 @@ public class Newfoundlands
  
 	   //The @Override means that the method is overriding the parent class
 	  //It can be overridden without the annotation. It just helps let us know that there is a parent class method that has been overridden by a child class. 
-    @Override
-    public String toString()
+//    @Override
+    public String teecee()
     {
         return("Hi my name is "+ this.getName() +
                ", I'm a " + this.getBreed() +
 															", and I'm " + this.getAge() + " years old" +
-															", My color is " + this.getColor() + "."
+															", My color is " + this.getColor() + "." +
+															"\nMy boyfriend's info is below "
 														);
     }
+				public String coder()
+							{
+											return("Hi my name is "+ this.getName() +
+																		", I'm a " + this.getBreed() +
+																		", and I'm " + this.getAge() + " years old" +
+																		", My color is " + this.getColor() + "."
+																	);
+							}
  
     public static void main(String[] args)
     {
         Newfoundlands teecee = new Newfoundlands("Teecee","Newfoundland", 2, "Black");
 					   Newfoundlands coder = new Newfoundlands("Coder","Newfoundland", 1, "White and Brown");
-        System.out.println(teecee.toString());
-				   	System.out.println(coder.toString());
+        System.out.println(teecee.teecee());
+				   	System.out.println(coder.coder());
     }
 }
